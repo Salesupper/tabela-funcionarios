@@ -28,17 +28,23 @@ Este script Python utiliza as bibliotecas Pandas e Matplotlib para realizar uma 
     ```
     O método `head()` exibe as 5 primeiras linhas do DataFrame `df`, fornecendo uma visão inicial dos dados.
 
+![head](https://github.com/user-attachments/assets/69c3322f-9176-46f7-856c-2185b6f3a393)
+
 4.  **Verificação dos tipos de dados:**
     ```python
     df.dtypes
     ```
     O atributo `dtypes` retorna o tipo de dados de cada coluna no DataFrame, auxiliando na compreensão da natureza de cada variável.
 
+![types](https://github.com/user-attachments/assets/b8b4bbe0-a3af-490e-9de8-629426708e1c)
+
 5.  **Visualização das últimas linhas:**
     ```python
     df.tail()
     ```
     O método `tail()` exibe as 5 últimas linhas do DataFrame `df`.
+
+![tail](https://github.com/user-attachments/assets/71de88e8-7315-4f45-bb80-4a49fd50632d)
 
 ## Filtragem de Dados
 
@@ -48,11 +54,15 @@ Este script Python utiliza as bibliotecas Pandas e Matplotlib para realizar uma 
     ```
     Esta linha utiliza indexação booleana para selecionar e exibir apenas as linhas do DataFrame onde o valor da coluna 'idade' é maior que 30.
 
+![idade](https://github.com/user-attachments/assets/41f435d1-53d4-4a8e-8730-82cf681e3188)
+
 2.  **Seleção de funcionários com salário superior a 5000:**
     ```python
     df[df['salário'] > 5000]
     ```
     Similar ao exemplo anterior, esta linha filtra o DataFrame para mostrar apenas os funcionários cujo 'salário' é maior que 5000.
+
+![salario](https://github.com/user-attachments/assets/cc09b40e-b1a9-4a0f-b982-3c222dea9dc4)
 
 3.  **Seleção de funcionários com idade superior a 30 anos E salário superior a 5000:**
     ```python
@@ -61,6 +71,8 @@ Este script Python utiliza as bibliotecas Pandas e Matplotlib para realizar uma 
     df[maiorTrinta & salarioCincoK]
     ```
     Aqui, duas séries booleanas (`maiorTrinta` e `salarioCincoK`) são criadas representando as condições. O operador `&` (AND) combina essas condições, e o resultado é usado para filtrar o DataFrame, exibindo apenas os funcionários que atendem a ambas as condições.
+
+![idade_salario](https://github.com/user-attachments/assets/ff863666-de9a-4174-a3ff-095803518d1c)
 
 ## Criação e Remoção de Colunas
 
@@ -71,12 +83,16 @@ Este script Python utiliza as bibliotecas Pandas e Matplotlib para realizar uma 
     ```
     Uma nova coluna chamada 'salário anual' é criada no DataFrame. Os valores desta coluna são calculados multiplicando os valores da coluna 'salário' por 12. O DataFrame resultante com a nova coluna é então exibido.
 
+![salario_anual](https://github.com/user-attachments/assets/87d85b09-d1bf-4485-bdb5-213409c6444f)
+
 2.  **Remoção da coluna 'salário anual':**
     ```python
     df = df.drop('salário anual', axis=1)
     df
     ```
     O método `drop()` é utilizado para remover a coluna 'salário anual' do DataFrame. O argumento `axis=1` especifica que uma coluna deve ser removida (ao invés de uma linha). O DataFrame atualizado, sem a coluna 'salário anual', é então exibido.
+
+![drop](https://github.com/user-attachments/assets/f46afff3-b396-4967-bcea-6f4c73d22b32)
 
 ## Informações do DataFrame
 
@@ -153,3 +169,6 @@ Python
 plt.show()
 
 plt.show() exibe o gráfico gerado.
+```
+
+![grafico](https://github.com/user-attachments/assets/cbd2cc89-5744-4480-8765-10eba9f68ae7)
